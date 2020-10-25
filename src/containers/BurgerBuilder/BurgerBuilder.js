@@ -38,7 +38,22 @@ export class BurgerBuilder extends Component {
         });
     };
 
-    removeIngrediantHandler = (type) => {};
+    removeIngrediantHandler = (type) => {
+        const oldCount = this.state.ingrediants[type];
+        const updatedCount = oldCount - 1;
+        const updatedIngrediants = { ...this.state.ingrediants };
+
+        updatedIngrediants[type] = updatedCount;
+
+        const priceAddition = INGREDIANT_PRICES[type];
+        const oldPrice = this.state.totalPrice;
+        const newPrice = oldPrice - priceAddition;
+
+        this.setState({
+            totalPrice: newPrice,
+            ingrediants: updatedIngrediants,
+        });
+    };
 
     render() {
         return (
