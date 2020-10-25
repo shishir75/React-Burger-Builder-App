@@ -5,8 +5,8 @@ import classes from "./BuildControls.module.css";
 const controls = [
     { label: "Salad", type: "salad" },
     { label: "Bacon", type: "bacon" },
-    { label: "Cheese", type: "cheese" },
     { label: "Meat", type: "meat" },
+    { label: "Cheese", type: "cheese" },
 ];
 
 const BuildControls = (props) => (
@@ -17,6 +17,7 @@ const BuildControls = (props) => (
                 label={ctrl.label}
                 added={() => props.ingrediantAdded(ctrl.type)}
                 removed={() => props.ingrediantRemoved(ctrl.type)}
+                disabled={props.disabled[ctrl.type]}
             />
         ))}
     </div>
