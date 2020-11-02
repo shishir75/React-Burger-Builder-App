@@ -13,7 +13,7 @@ const burger = (prop) => {
             return preValue.concat(currentValue);
         }, []);
 
-    if (transformedIngrediants.length == 0) {
+    if (transformedIngrediants.length === 0) {
         transformedIngrediants = <p>Please start adding ingrediants</p>;
     }
 
