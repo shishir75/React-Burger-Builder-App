@@ -1,14 +1,14 @@
 .Burger {
     width: 100%;
     margin: auto;
-    width: 250px;
-    overflow-y: scroll;
+    height: 250px;
+    overflow: scroll;
     text-align: center;
     font-weight: bold;
     font-size: 1.2rem;
 }
 
-@media (max-width: 500px) and (max-height: 400px) {
+@media (min-width: 500px) and (min-height: 400px) {
     .Burger {
         width: 350px;
         height: 300px;
